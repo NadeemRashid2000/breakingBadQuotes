@@ -1,0 +1,175 @@
+
+/* backgroung container */
+.back {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Background GIF image */
+.bg-gif {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+}
+
+/* Dark overlay on top of the background image  */
+.back::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white-display;
+    opacity: 0.0;
+}
+
+/* Main hero container */
+.hero {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/* Centered content inside hero section */
+.hero .content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+}
+
+/* Main title styling */
+.title {
+    font-size: 60px;
+}
+
+/* Full-screen loading overlay */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+
+}
+
+.load-img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transition:  opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+/* when loading is hidden */
+.loading.hidden {
+    opacity: 0;
+    transform: scale(1.2);
+    pointer-events: none;
+}
+
+/* Apply same fade/zoom effect to image inside hidden loading */
+.loading.hidden .load-img {
+    opacity: 0;
+    transform: scale(1.2);
+} 
+
+
+
+/* Background container */
+.back {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    }
+    
+    /* Background GIF image */
+    .bg-gif {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        }
+        
+        /* Dark overlay on top of the background image */
+        .back::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: white-display;
+            /* opacity: 0.8; /* Semi-transparent black overlay  */
+            }
+            
+            /* Main hero container */
+            .hero {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                }
+                
+                /* Centered content inside hero section */
+                .hero .content {
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    top: 50%;
+                    left: 50%;
+                    text-align: center;
+                    }
+                    
+                    /* Main title styling */
+                    .title {
+                        font-size: 60px;
+                        }
+                        
+                        /* Full-screen loading overlay */
+                        .loading {
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 100vw;
+                            height: 100vh;
+                            background: white;
+                            z-index: 9999; 
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            opacity: 1;
+                            transition: opacity 1s ease-out, transform 1s ease-out;
+                            }
+                            
+                            /* Loading image inside the overlay */
+                            .load-img {
+                                width: 100vw;
+                                height: 100vh;
+                                object-fit: cover; 
+                                transition: opacity 1s ease-out, transform 1s ease-out;
+                                }
+                                
+                                /* When loading is hidden */
+                                .loading.hidden {
+                                    opacity: 0;               
+                                    transform: scale(1.2);     
+                                    pointer-events: none;     
+                                    }
+                                    
+                                    /* Apply same fade/zoom effect to image inside hidden loading */
+                                    .loading.hidden .load-img {
+                                        opacity: 0;
+                                        transform: scale(1.2);
+                                        }
+                                        
+                                        
+                                        

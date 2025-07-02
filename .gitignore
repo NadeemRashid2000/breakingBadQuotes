@@ -1,0 +1,41 @@
+# ========== Frontend ==========
+# Ignore node_modules and build output
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.vite/
+
+# Lock files (optional if you don't want to track them)
+# /frontend/package-lock.json
+
+# ========== Backend ==========
+/backend/node_modules/
+
+# Lock files (optional)
+/backend/package-lock.json
+
+# ========== Common ==========
+# Environment files (store secrets, API keys, etc.)
+.env
+.env.local
+
+# OS junk files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor settings
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ========== Optional Python ignore (if used later) ==========
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/

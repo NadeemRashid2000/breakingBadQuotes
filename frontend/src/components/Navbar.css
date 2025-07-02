@@ -1,0 +1,106 @@
+/* Base header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 1rem;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    z-index: 10;
+}
+
+/* Background color when scrolled */
+.header-bg {
+    /* background-color: #16a085; */
+    background-color: #4A3C31;
+    transition: 0.5s;
+    border-bottom:  1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0  4px 6px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    color: #e0e0e0;
+
+}
+
+/* logo size */
+.logo {
+
+    display: block;
+    height: 90px;
+    width: 100px;
+}
+
+/* Navigation bar for desktop */
+.nav-bar {
+    display: flex;
+}
+
+.nav-bar li {
+    padding:   0 1rem;
+}
+
+.nav-bar li a {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+/* Hamburger icon hidden by default */
+.hamburger {
+    display: None;
+}
+
+/* styles for screens smaller than  1040px */
+@media screen and (max-width: 1040px) {
+    /* Navigation bar hidden intially */
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform : translate(-50% , -50%);
+        background-color: cyan;
+        border-radius: 50%;
+        opacity: 0;
+        z-index: -1;
+        transition: all 0.6 ease;
+    }
+
+    /* Active nav-bar (when hamburger is clicked) */
+    .nav-bar.active {
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        border-radius: 0;
+        opacity: 1;
+        z-index: 3;
+    }
+
+     /* Link spacing and sizing for mobile */
+     .nav-bar li {
+        padding: 1rem;
+      }
+
+      .nav-bar li a {
+        font-size: 2rem;
+      }
+
+      /* Show hamburger icon on mobile */
+  .hamburger {
+    display: initial;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    z-index: 3;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+}
